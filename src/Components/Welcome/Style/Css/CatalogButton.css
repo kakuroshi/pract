@@ -1,0 +1,37 @@
+.catalog-welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog-button-welcome{
+    border: solid;
+    border-radius: 50%;
+    width: 10vw;
+    height: 20vh;
+    border-width: 1px;
+    border-color: rgba(81, 74, 126, 1);
+}
+
+.catalog-button-welcome:hover{
+    background-color: rgba(81, 74, 126, 1);
+    color: white;
+    box-shadow: 0px 0px 30px rgb(66, 61, 61);
+
+    stroke-width: 1px;
+    stroke: white;
+}
+
+.catalog-button-welcome:hover>p{
+    color: white;
+}
+
+.catalog-button-p{
+    margin-right: 2vw;
+    color: rgba(81, 74, 126, 1);
+    font-size: 1.5em;
+}
+
+.arrow-catalog{
+    margin-left: 2vw;
+}

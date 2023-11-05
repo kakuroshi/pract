@@ -1,0 +1,61 @@
+.feedback{
+    margin-top: 10%;
+}
+
+.feedback-head-text{
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.feedback-head-text{
+    margin-bottom: 5%;
+}
+
+.user-feedback{
+    display: flex;
+    min-width: 30%;
+    max-width: 40%;
+}
+
+.feedback-div{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+.feddback-user-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating{
+    display: flex;
+    max-width: 30%;
+    min-width: 30%;
+}
+
+.feedback-user-text{
+    color: rgb(125, 125, 125);
+}
+
+.date-feedback{
+    color: rgb(81, 74, 126);;
+}
+
+.user-feedback-name{
+    font-weight: 400;
+}
+
+.feedback-add-button{
+    margin-top: 5%;
+    background-color: rgba(81, 74, 126, 1);
+    color: white;
+    min-width: 10%;
+    min-height: 4vh;
+}
+
+.text-button-feedback{
+    font-weight: 100;
+    font-size: 1em;
+}

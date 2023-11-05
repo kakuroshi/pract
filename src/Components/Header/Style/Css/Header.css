@@ -1,0 +1,34 @@
+.header-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-div-header{
+    display: flex;
+    justify-content: space-between;
+    min-width: 12%;
+    margin-left: 60%;
+}
+
+.header-buttons{
+    display: flex;
+    justify-content: space-between;
+    min-width: 7%;
+}
+
+.input-search-header{
+    border: 0px;
+    border-bottom: solid;
+    background-color: transparent;
+    border-color: rgba(125, 125, 125, 1);
+}
+
+.input-search-header:focus{
+    outline: none;
+}
+
+button{
+    background-color: transparent;
+    border: 0px;
+}

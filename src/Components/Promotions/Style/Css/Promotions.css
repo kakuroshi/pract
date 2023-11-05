@@ -1,0 +1,72 @@
+.promotions-head-text{
+    margin-top: 10%;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+
+.promotions-head-help{
+    color: rgba(81, 74, 126, 1);
+    font-family: 'Bad Script', cursive;
+    font-weight: 300;
+    position: absolute;
+    top: 140%;
+    left: 18%;
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.name-product{
+    color: rgba(125, 125, 125, 1);
+}
+
+.stars-product{
+    display: flex;
+    min-width: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product-promotions{
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+}
+
+.prices-promotions{
+    display: flex;
+    align-items: center;
+}
+.old-price-promotions{
+    margin-left: 10%;
+    color: rgba(81, 74, 126, 1);
+}
+
+.product-main-information{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.more-about-product{
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+}
+
+.more-product-text{
+    margin-right: 5%;
+}

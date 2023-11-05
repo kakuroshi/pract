@@ -1,0 +1,88 @@
+.semicircle-why-choose{
+    position: absolute;
+    top: 90%;
+    margin-left: 80vw;
+    height: 50vh;
+    width: 25vw;
+    border: solid;
+    border-radius: 50%;
+    border-color: rgba(81, 74, 126, 1);
+    border-width: 1px;
+}
+
+.why-choose-div{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.why-choose-head-text{
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+.why-us-text {
+    color: rgba(125, 125, 125, 1);
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+}
+
+.back-button-why-choose{
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+}
+
+.svg-back{
+    margin-right: 20vw;
+}
+
+.chat-button-why-choose{
+    position: absolute;
+    top: 143%;
+    left: 85%;
+    background-color: rgba(81, 74, 126, 1);
+    width: 3.5vw;
+    height: 7vh;
+    border-radius: 50%;
+}
+
+.first-circle-small{
+    position: absolute;
+    top: 124%;
+    left: 20%;
+}
+
+.second-circle-small{
+    position: absolute;
+    top: 135%;
+    left: 77%;
+}
+
+.first-circle-big{
+    position: absolute;
+    top: 120%;
+    left: 65%;
+}
+
+.second-circle-big{
+    position: absolute;
+    top: 138%;
+    left: 40%;
+}

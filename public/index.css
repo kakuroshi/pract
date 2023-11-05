@@ -1,0 +1,9 @@
+body{
+    background-color: rgba(255, 253, 245, 1);
+    overflow-x: hidden;
+}
+
+#root{
+    margin-left: 10%; 
+    margin-right: 10%;
+}
