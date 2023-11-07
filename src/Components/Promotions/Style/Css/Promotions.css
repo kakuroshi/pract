@@ -10,17 +10,17 @@
     color: rgba(81, 74, 126, 1);
     font-family: 'Bad Script', cursive;
     font-weight: 300;
-    position: absolute;
-    top: 140%;
-    left: 18%;
+    position: relative;
+    bottom: 4vh;
+    left: 12%;
 }
 
 .products{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-family: 'Bad Script', cursive;
     font-family: 'Roboto', sans-serif;
+    overflow: auto;
 }
 
 .name-product{
@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: column;
     max-width: 20vw;
+    margin-right: 2vw;
 }
 
 .prices-promotions{
@@ -67,6 +68,21 @@
     border-width: 1px;
 }
 
+.more-about-product:hover{
+    background-color: rgba(81, 74, 126, 1);
+    color: rgba(255, 253, 245, 1);
+}
+
 .more-product-text{
     margin-right: 5%;
+}
+
+.arrow-btn-promotions{
+    position: relative;
+    left: 95%;
+    bottom: 20vh;
+}
+
+.arrow-btn-promotions:hover{
+    stroke: rgba(81, 74, 126, 1);
 }

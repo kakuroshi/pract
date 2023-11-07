@@ -9,9 +9,9 @@
 }
 
 .faq-header-faq-text{
-    position: absolute;
-    left: 27%;
-    top: 245%;
+    position: relative;
+    left: 25%;
+    bottom: 3vh;
     color: rgba(81, 74, 126, 1);
     font-family: 'Bad Script', cursive;
     font-weight: 300;
@@ -22,4 +22,10 @@
     justify-content: space-between;
     font-family: 'Bad Script', cursive;
     font-family: 'Roboto', sans-serif;
+}
+
+.text-faq-open{
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(125, 125, 125, 1);
 }

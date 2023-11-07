@@ -1,0 +1,13 @@
+.modal_for_enter{
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+
+.exit_modal{
+    background-color: rgba(81, 74, 126, 1);
+    width: 3vw;
+    height: 6vh;
+    border-radius: 50%;
+}

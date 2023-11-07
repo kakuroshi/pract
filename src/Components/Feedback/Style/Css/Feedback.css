@@ -16,15 +16,16 @@
     display: flex;
     min-width: 30%;
     max-width: 40%;
+    margin-right: 2vw;
 }
 
 .feedback-div{
+    overflow: auto;
     display: flex;
-    justify-content: space-between;
     font-family: 'Roboto', sans-serif;
 }
 
-.feddback-user-footer{
+.feedback-user-footer{
     display: flex;
     justify-content: space-between;
 }
@@ -40,7 +41,7 @@
 }
 
 .date-feedback{
-    color: rgb(81, 74, 126);;
+    color: rgb(81, 74, 126);
 }
 
 .user-feedback-name{
@@ -55,7 +56,32 @@
     min-height: 4vh;
 }
 
+.feedback-add-button:hover{
+    background-color: rgba(255, 253, 245, 1);
+    color: rgb(81, 74, 126);
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(81, 74, 126) ;
+}
+
 .text-button-feedback{
     font-weight: 100;
     font-size: 1em;
+}
+
+.arrow-btn-feedback:hover{
+    .arrow-feedback{
+        width: 120%;
+    }
+}
+
+.feedback-user-img{
+    border-radius: 50%;
+    width: 5vw;
+    height: 10vh;
+    object-fit:cover;
+}
+
+.feedback-user-information{
+    margin-left: 1vw;
 }

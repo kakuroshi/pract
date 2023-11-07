@@ -32,3 +32,74 @@ button{
     background-color: transparent;
     border: 0px;
 }
+
+.profile-modal{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 80%;
+    top: 10%;
+    background-color: rgba(255, 253, 245, 1);
+}
+
+.profile-modal-img{
+    margin-left: 42%;
+}
+
+.enter-btn-modal{
+    margin-top: 2vh;
+    height: 3vh;
+    width: 5vw;
+    font-size: 1.2em;
+    background-color: rgba(81, 74, 126, 1);
+    color: rgba(255, 253, 245, 1);
+    margin-left: 25%;
+    margin-bottom: 2vh;
+}
+
+.enter-btn-modal:hover{
+    background-color: rgba(255, 253, 245, 1);
+    color: rgba(81, 74, 126, 1);
+    border: solid;
+    border-color: rgba(81, 74, 126, 1);
+    border-width: 1px;
+}
+
+.modal-cart, .like-modal, .view-modal{
+    margin-left: 1vw;
+    margin-bottom: 2vh;
+}
+
+.hr-modal{
+    margin-bottom: 2vh;
+}
+
+.filter-header{
+    display: none;
+    background-color: rgba(18, 18, 18, 1);
+    min-width: 20%;
+    min-height: 100%;
+    position: absolute;
+    top: 5%;
+}
+
+.logo-filter{
+    margin-left: 1vw;
+}
+
+.filter-text{
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+
+.text-filters-divs{
+    display: flex;
+    color: rgba(255, 253, 245, 1);
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right-text-filters{
+    margin-left: 1vw;
+}
