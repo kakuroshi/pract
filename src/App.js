@@ -8,11 +8,12 @@ import Faq from "./Components/FAQ/Js/FAQ";
 import Cooperation from "./Components/Cooperation/Js/Cooperation";
 import WelcomeToJoin from "./Components/WelcomeToJoin/Js/WelcomeToJoin";
 import Footer from "./Components/Footer/Js/Footer";
+import { users } from "./user";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header users = {users} />
       <Welcome />
       <CatalogButton />
       <WhyChooseUs />

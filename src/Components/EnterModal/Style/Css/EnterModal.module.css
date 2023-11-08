@@ -1,13 +1,88 @@
 .modal_for_enter{
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
     display: none;
     position: absolute;
     top: 10%;
-    right: 30%;
+    left: 15%;
+    width: 65%;
+    height: 60vh;
+    background-color: rgba(255, 253, 245, 1);
+    border: solid;
 }
 
 .exit_modal{
+    margin-left: 90%;
+    margin-top: 5%;
     background-color: rgba(81, 74, 126, 1);
     width: 3vw;
     height: 6vh;
     border-radius: 50%;
+}
+
+.form_enter{
+    margin-left: 10%;
+}
+
+.enter_text_h1{
+    font-size: 4em;
+    font-weight: 300;
+}
+
+.forgot_password_text_enter{
+    color: rgba(81, 74, 126, 1);
+    font-size: 1.3em;
+}
+
+.input_email, .input_password{
+    border: 0px;
+    height: 3vh;
+    border-bottom: 1px solid;
+    border-color: rgba(125, 125, 125, 1);
+    background-color: transparent;
+    margin-top: 2vh;
+}
+
+.input_email::placeholder, .input_password::placeholder{
+    font-size: 2em;
+}
+
+.inputs_div_enter{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.buttons_div_enter{
+    margin-top: 3vh;
+}
+
+.enter_cabinet_btn{
+    background-color: rgba(81, 74, 126, 1);
+    width: 10vw;
+    height: 5vh;
+    color: rgba(255, 253, 245, 1);
+    font-size: 1.2em;
+}
+
+.register_btn_enter{
+    background-color: transparent;
+    border: 1px solid;
+    border-color: rgba(81, 74, 126, 1);
+    width: 10vw;
+    height: 5vh;
+    margin-left: 2vw;
+    font-size: 1.2em;
+}
+
+.semicircle_modal{
+    position: relative;
+    left: 54.4vw;
+    bottom: 13vh;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-color: rgba(81, 74, 126, 1);
+    width: 10vw;
+    height: 20vh;
+    border-top-left-radius: 100%;
 }

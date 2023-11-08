@@ -11,7 +11,17 @@ import logo from "../Style/Images/logo.png"
 import { useState } from "react"
 import EnterModal from "../../EnterModal/Js/EnterModal"
 
-const Header = () => {
+const Header = (props) => {
+    let nickname, profileImgUser
+
+    let user = JSON.parse(localStorage.getItem("auth"))
+
+    if (user !== null) {
+        nickname = user.username
+        profileImgUser = user.img
+
+        console.log(nickname);
+    }
 
     const filterBtns = [
         {
@@ -107,14 +117,12 @@ const Header = () => {
         document.querySelector(".profile-modal").style.display === "flex" ? document.querySelector(".profile-modal").style.display = "none" : document.querySelector(".profile-modal").style.display = "flex"
     }
 
-    let i = 0
-
     function showFilter() {
         document.querySelector(".filter-header").style.display === "block" ? document.querySelector(".filter-header").style.display = "none" : document.querySelector(".filter-header").style.display = "block"
     }
 
     function openEnterModal () {
-        document.querySelector(".modal_for_enter").style.display === "none" ? document.querySelector(".modal_for_enter").style.display = "block" : document.querySelector(".modal_for_enter").style.display = "none"
+        document.querySelector(".EnterModal_modal_for_enter__tj504").style.display === "block" ? document.querySelector(".EnterModal_modal_for_enter__tj504").style.display = "none" : document.querySelector(".EnterModal_modal_for_enter__tj504").style.display = "block"
     }
 
     return (
@@ -243,7 +251,7 @@ const Header = () => {
                 </button>
             </div>
 
-            <EnterModal />
+            <EnterModal users={props.users}/>
         </div>
     )
 }
