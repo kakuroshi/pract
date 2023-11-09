@@ -1,29 +1,20 @@
-import Header from "./Components/Header/Js/Header"
-import Welcome from "./Components/Welcome/Js/Welcome"
-import CatalogButton from "./Components/Welcome/Js/CatalogButton";
-import WhyChooseUs from "./Components/WhyChooseUs/Js/WhyChooseUs";
-import Promotions from "./Components/Promotions/Js/Promotions";
-import Feedback from "./Components/Feedback/Js/Feedback";
-import Faq from "./Components/FAQ/Js/FAQ";
-import Cooperation from "./Components/Cooperation/Js/Cooperation";
-import WelcomeToJoin from "./Components/WelcomeToJoin/Js/WelcomeToJoin";
-import Footer from "./Components/Footer/Js/Footer";
-import { users } from "./user";
+import LandingPage from "./Components/LangingPage/LangingPage";
+import Catalog from "./Components/Catalog/Js/Catalog";
+import Favorites from "./Components/Favorites/Js/Favorites";
+import ProductPage from "./Components/ProductPage/Js/ProductPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Header users = {users} />
-      <Welcome />
-      <CatalogButton />
-      <WhyChooseUs />
-      <Promotions />
-      <Feedback />
-      <Faq />
-      <Cooperation />
-      <WelcomeToJoin />
-      <Footer />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LandingPage />}/>
+      <Route path="/Catalog" element={<Catalog />}/>
+      <Route path="/Favorites" element={<Favorites />} />
+      <Route path="/ProductPage" element={<ProductPage />} />
+    </Routes>
+      
+    </BrowserRouter>
   );
 }
 

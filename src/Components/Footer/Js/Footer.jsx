@@ -4,7 +4,7 @@ import Phone from "../Style/Images/Phone.svg"
 import Clock from "../Style/Images/Clock.svg"
 import logo from "../Style/Images/lof.png"
 
-const Footer = () => {
+const Footer = (props) => {
 
     let information = [
         {
@@ -18,7 +18,7 @@ const Footer = () => {
     ]
 
     return (
-        <div className="footer-div">
+        <footer className={props.class}>
             <div className="information-footer">
                 <p className="footer-information-head-text">Информация</p>
                     <div className="information-block">
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
 
             <img className="logo-footer" src={logo} alt="" />
-        </div>
+        </footer>
     )
 }
 

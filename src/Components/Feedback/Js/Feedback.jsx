@@ -5,7 +5,7 @@ import Client from "../Style/Images/Ellipse_8.svg"
 import Client2 from "../Style/Images/Ellipse_9.svg"
 // import Arrow from "../Style/Images/arrow.svg"
 
-const Feedback = () => {
+const Feedback = (props) => {
 
     const [feedback, setFeedback] = useState([
         {
@@ -38,7 +38,7 @@ const Feedback = () => {
 
     return (
         <div className="feedback">
-            <h1 className="feedback-head-text">Отзывы наших покупателей</h1>
+            <h1 className="feedback-head-text">{props.head}</h1>
 
             <div className="feedback-div">
 

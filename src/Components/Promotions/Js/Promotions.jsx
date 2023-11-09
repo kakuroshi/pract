@@ -1,9 +1,6 @@
 import "../Style/Css/Promotions.css"
-import Heart from "../Style/Images/clarity_heart-line.svg"
-import Cart from "../Style/Images/clarity_shopping-bag-line.svg"
+import CardProduct from "../../CardProduct/Js/CardProduct"
 import Test from "../Style/Images/Rectangle_23.png"
-import Arrow from "../Style/Images/arrow.svg"
-import Star from "../Style/Images/star.svg"
 import Test2 from "../Style/Images/Rectangle_24.png"
 import Test3 from "../Style/Images/Rectangle_25.png"
 import Test4 from "../Style/Images/Rectangle_26.png"
@@ -53,42 +50,7 @@ const Promotions = () => {
             <div className="products">
                 {
                     products.map(el =>
-                        <div key={el.id} className="product-promotions">
-                            <img className="img-product" src={el.img} alt="" />
-                            <div className="product-information-promotions">
-                                <div className="prices-promotions">
-                                    <p className="current-price-promotions">{el.newPrice}</p>
-                                    <s className="old-price-promotions">{el.oldPrice}</s>
-                                </div>
-
-                                <div className="product-main-information">
-                                    <p className="name-product">{el.name}</p>
-                                    <div className="main-buttns-product">
-                                        <button className="like-button-product">
-                                            <img src={Heart} alt="no img" />
-                                        </button>
-                                        <button className="cart-button-product">
-                                            <img src={Cart} alt="no img" />
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="product-footer">
-                                    <button className="more-about-product">
-                                        <p className="more-product-text">Подробнее</p>
-                                        <img className="arrow-promotions" src={Arrow} alt="" />
-                                    </button>
-
-                                    <div className="stars-product">
-
-                                        {new Array(el.rating).fill(1).map((item, index) => (
-                                            <img className="star" src={Star} alt="no img" />
-                                        ))}
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       <CardProduct class="product-promotions" classImg="img-product" name={el.name} newPrice={el.newPrice} oldPrice={el.oldPrice} rating={el.rating} img={el.img} id={el.id} />
                     )
                 }
             </div>

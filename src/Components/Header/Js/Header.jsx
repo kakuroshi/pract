@@ -10,17 +10,18 @@ import hr from "../Style/Images/Line_68.svg"
 import logo from "../Style/Images/logo.png"
 import { useState } from "react"
 import EnterModal from "../../EnterModal/Js/EnterModal"
+import exit from "../Style/Images/exit.svg"
+import { NavLink } from "react-router-dom"
 
 const Header = (props) => {
-    let nickname, profileImgUser
+    let nickname = ""
+    let profileImgUser = ProfileImg
 
     let user = JSON.parse(localStorage.getItem("auth"))
 
     if (user !== null) {
         nickname = user.username
         profileImgUser = user.img
-
-        console.log(nickname);
     }
 
     const filterBtns = [
@@ -113,25 +114,20 @@ const Header = (props) => {
 
     const [activeFilter, setActive] = useState(null)
 
-    function getModal(){
-        document.querySelector(".profile-modal").style.display === "flex" ? document.querySelector(".profile-modal").style.display = "none" : document.querySelector(".profile-modal").style.display = "flex"
-    }
+    const [getModal, setModal] = useState(null)
 
-    function showFilter() {
-        document.querySelector(".filter-header").style.display === "block" ? document.querySelector(".filter-header").style.display = "none" : document.querySelector(".filter-header").style.display = "block"
-    }
+    const [showFilter, setFilters] = useState(null)
 
-    function openEnterModal () {
-        document.querySelector(".EnterModal_modal_for_enter__tj504").style.display === "block" ? document.querySelector(".EnterModal_modal_for_enter__tj504").style.display = "none" : document.querySelector(".EnterModal_modal_for_enter__tj504").style.display = "block"
-    }
+    const [openEnterModal, setEnterModal] = useState(null)
 
     return (
-        <div className="header-div">
-            <button onClick={showFilter} className="menu-button-header">
+        <header className="header-div">
+            <button onClick={showFilter === null ? () => {setFilters(1)} : () => {setFilters(null)}} className="menu-button-header">
                 <img src={MenuIco} alt="Menu button" />
             </button>
 
-            <div className="filter-header">
+            <div style={showFilter !== null ? {display: "block"} : {display: "none"}
+            } className="filter-header">
                 <img className="logo-filter" src={logo} alt="" />
                 <div className="text-filters-divs">
                     <div className="left-text-filters">
@@ -213,23 +209,31 @@ const Header = (props) => {
             </div>
 
             <div className="header-buttons">
-                <button onClick={getModal} className="profile-button-header">
+                <button onClick={
+                    getModal === null ? () => {setModal(1)} : () => {setModal(null)} 
+                    } className="profile-button-header">
                     <img src={ProfileIco} alt="" />
                 </button>
-                <button className="like-button-header">
-                    <img src={LikeIco} alt="" />
-                </button>
+                <NavLink to="/Favorites">
+                    <button className="like-button-header">
+                        <img src={LikeIco} alt="" />
+                    </button>
+                </NavLink>
+                    
                 <button className="cart-button-header">
                     <img src={CartIco} alt="" />
                 </button>
             </div>
 
-            <div className="profile-modal">
+            <div style={getModal !== null ? {display: "flex"} : {display: "none"}} className="profile-modal">
                 <div className="profile-modal-img">
-                    <img src={ProfileImg} alt="no img" />
+                    <img className="user-image-profile-modal" src={profileImgUser} alt="no img" />
+                    <p style={nickname !== "" ? {display: "block"} : {display: "none"}} className="name-user-auth">{nickname}</p>
                 </div>
 
-                <button onClick={openEnterModal} className="enter-btn-modal">
+                <button onClick={
+                    openEnterModal === null ? () => {setEnterModal(1)} : () => {setEnterModal(null)}
+                } style={user !== null ? {display: "none"} : {display: "block"}} className="enter-btn-modal">
                     Войти
                 </button>
 
@@ -240,19 +244,33 @@ const Header = (props) => {
 
                 <img className="hr-modal" src={hr} alt="" />
 
-                <button className="like-modal">
-                    <img src={LikeIco} alt="" />
-                    Избранное
-                </button>
+                <NavLink to="/Favorites">
+                    <button className="like-modal">
+                        <img src={LikeIco} alt="" />
+                        Избранное
+                    </button>
+                </NavLink>
+                
 
                 <button className="view-modal">
                     <img src={view} alt="" />
                     Просмотренные
                 </button>
+
+                <img style={user !== null ? {display: "block"} : {display: "none"}} className="hr-modal" src={hr} alt="" />
+
+                <button onClick={ () => {
+                    localStorage.removeItem('auth')
+                    window.location.reload()
+                }   
+                } style={user !== null ? {display: "block"} : {display: "none"}} className="exit-account">
+                    <img src={exit} alt="" />
+                    Выйти
+                </button>
             </div>
 
-            <EnterModal users={props.users}/>
-        </div>
+            <EnterModal setEnterModal={setEnterModal} openEnterModal={openEnterModal} users={props.users}/>
+        </header>
     )
 }
 

@@ -1,0 +1,136 @@
+.product-page{
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-product-page{
+    font-size: 3em;
+}
+
+.product-page-head{
+    display: flex;
+}
+
+.about-product-pr-page{
+    display: flex;
+    align-items: baseline;
+}
+
+.title-product-page{
+    margin-left: 4vw;
+    font-weight: 100;
+}
+
+.article-product-page{
+    margin-left: 1vw;
+}
+
+.main-product-page{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product-page-image{
+    height: 60vh;
+}
+
+.more-information-product-page{
+    width: 50%;
+}
+
+.colors-product-page{
+    margin-top: 5vh;
+}
+
+.colors-all-product-page{
+    display: flex;;
+}
+
+.color-product-page{
+    cursor: pointer;
+    margin-right: 1vw;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0.5px solid gray;
+}
+
+.sizes-product-page{
+    margin-top: 5vh;
+}
+
+.sizes-block-product-page{
+    display: flex;
+}
+
+.size-div-product-page{
+    margin-right: 2vw;
+    cursor: pointer;
+    border: 0.5px solid #514A7E;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-sizws-product-page{
+    margin-top: 3vh;
+    color: #514A7E;
+    font-size: 1.1em;
+}
+
+.buttons-head-product-page{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.in-cart-button-product-page{
+    cursor: pointer;
+    background-color: #514A7E;
+    color: rgba(255, 253, 245, 1);
+    width: 20%;
+    height: 3vh;
+    box-shadow: 0px 0px 30px rgb(170, 159, 159);
+}
+
+.description-product-page{
+    margin-top: 5vh;
+}
+
+.footer-product-page{
+    margin-top: 10vh;
+    right: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(81, 74, 126, 1);
+    color: rgba(255, 253, 245, 1);
+    font-family: 'Bad Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+}
+
+.price-product-page, .description-h3-product-page, .colors-title-product-page, .sizes-title-product-page{
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.desc-product-page{
+    color: rgba(125, 125, 125, 1);
+}
+
+.in-cart-button-product-page:hover{
+    background-color: rgba(255, 253, 245, 1);
+    color: #514A7E;
+    .svg-cart{
+        stroke: #514A7E;
+    }
+}
+
+.like-button-product-page{
+    margin-left: 2vw;
+    cursor: pointer;
+}

@@ -44,11 +44,11 @@ button{
 }
 
 .profile-modal-img{
-    margin-left: 42%;
+    margin-left: 30%;
 }
 
 .enter-btn-modal{
-    margin-top: 2vh;
+    /* margin-top: 1vh; */
     height: 3vh;
     width: 5vw;
     font-size: 1.2em;
@@ -66,7 +66,7 @@ button{
     border-width: 1px;
 }
 
-.modal-cart, .like-modal, .view-modal{
+.modal-cart, .like-modal, .view-modal, .exit-account{
     margin-left: 1vw;
     margin-bottom: 2vh;
 }
@@ -102,4 +102,16 @@ button{
 
 .right-text-filters{
     margin-left: 1vw;
+}
+
+.user-image-profile-modal{
+    border-radius: 50%;
+    width: 4vw;
+    height: 8vh;
+    object-fit: cover;
+}
+
+.name-user-auth{
+    margin-top: 2vh;
+    display: none;
 }

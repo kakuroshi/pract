@@ -5,6 +5,7 @@
 }
 
 .catalog-button-welcome{
+    text-decoration: none;
     border: solid;
     border-radius: 50%;
     width: 10vw;
