@@ -10,6 +10,39 @@ const CardProduct = (el) => {
 
     const [like, setLike] = useState(null)
 
+    function getCart() {
+        let flag;
+        const cartItems = localStorage.getItem("cart") !== null ? JSON.parse(localStorage.getItem("cart")) : []
+        console.log(cartItems);
+        let cart;
+
+        for(let i = 0; i < cartItems.length; i++) {
+            if(cartItems[i].id === el.id) {
+                cartItems[i].count += 1
+                flag = true 
+                break;
+            }
+        }
+
+        if (!flag) {
+            const cartItem = {
+                id: el.id,
+                name: el.name,
+                size: '42',
+                color: 'black',
+                img: el.img,
+                price: el.newPrice,
+                count: 1
+            }
+            cart = [...cartItems, cartItem]
+            localStorage.setItem("cart", JSON.stringify(cart))
+        } else {
+            cart = [...cartItems]
+        }
+        localStorage.setItem("cart", JSON.stringify(cart))
+        alert("Добавлено в корзину")
+    }
+
     function likeProduct() {
 
         let likeHelp = null
@@ -63,7 +96,6 @@ const CardProduct = (el) => {
 
             for (let i = 0; i < lsMas.length; i++) {
                 if (el.id === lsMas[i].id) {
-                    console.log(el.id === lsMas[i].id);
                     return "red"
                 }
             }
@@ -95,7 +127,7 @@ const CardProduct = (el) => {
                                 className="like-button-product">
                             <img src={Heart} alt="no img" />
                         </button>
-                        <button className="cart-button-product">
+                        <button onClick={getCart} className="cart-button-product">
                             <img src={Cart} alt="no img" />
                         </button>
                     </div>

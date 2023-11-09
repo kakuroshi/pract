@@ -84,7 +84,7 @@ const ProductPage = () => {
                                     <div className="size-div-product-page" 
                                     style={ size.num === selectedSize ? {backgroundColor: "#514A7E"} : {backgroundColor: "#FFFDF5"}}
                                     onClick={ size.num === selectedSize ? () => setSelectedSize(null) : () => setSelectedSize(size.num)}>
-                                        <p className="letter=product-page"
+                                        <p className="letter-product-page"
                                         style={ size.num === selectedSize ? {color: "#FFFDF5"} : {color: "#514A7E"}}>{size.letter}</p>
                                         <p className="number-size-product-page"
                                         style={ size.num === selectedSize ? {color: "#FFFDF5"} : {color: "#7D7D7D"}}>{size.num}</p>

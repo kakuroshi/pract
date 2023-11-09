@@ -220,9 +220,11 @@ const Header = (props) => {
                     </button>
                 </NavLink>
                     
-                <button className="cart-button-header">
-                    <img src={CartIco} alt="" />
-                </button>
+                <NavLink to="/Cart">
+                    <button className="cart-button-header">
+                        <img src={CartIco} alt="" />
+                    </button>
+                </NavLink>
             </div>
 
             <div style={getModal !== null ? {display: "flex"} : {display: "none"}} className="profile-modal">
@@ -237,10 +239,12 @@ const Header = (props) => {
                     Войти
                 </button>
 
-                <button className="modal-cart">
-                    <img src={CartIco} alt="" />
-                    Корзина
-                </button>
+                <NavLink to="/Cart">
+                    <button className="modal-cart">
+                        <img src={CartIco} alt="" />
+                        Корзина
+                    </button>
+                </NavLink>
 
                 <img className="hr-modal" src={hr} alt="" />
 
