@@ -10,7 +10,14 @@
     font-weight: 300;
     position: absolute;
     width: 100%;
+    bottom: 0%;
     left: 0%;
+}
+
+.empty-favorite{
+    font-weight: 100;
+    font-size: 3em;
+    margin-left: 30%;
 }
 
 .favorite-h1{

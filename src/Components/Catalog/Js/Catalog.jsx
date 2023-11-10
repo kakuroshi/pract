@@ -10,12 +10,17 @@ import Test3 from "../Style/Images/Rectangle_25.png"
 import Test4 from "../Style/Images/Rectangle_26.png"
 import {users} from "../../../user"
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
 
 const Catalog = () => {
-    let path = 'Главная/ Женщинам /'
-    let path2 = 'Блузки и рубашки'
-    let path3 = 'Блузки и рубашки для женщин'
-
+    let path = localStorage.getItem("path")
+    let path2 = localStorage.getItem("subPath")
+    let path3
+    path === '' && path2 === '' ? path3 = "Главная" : path3 = `${path2.slice(2)} для `  + path.slice(2)
+    if (path !== '' && path2 === '') {
+        path3 = path.slice(2)
+    }
+ 
     let products = [
         {
             name: "Блузка",
@@ -100,8 +105,27 @@ const Catalog = () => {
             <Header users={users}/>
 
             <div className="path-catalog">
-                <h3 className="catalog-path-text">{path}</h3>
+
+                <NavLink className="nav-link-catalog"
+                    onClick={() => {
+                        localStorage.setItem("path", '')
+                        localStorage.setItem("subPath", '')
+                        window.location.reload()
+                    }}               
+                to="/Catalog">
+                    <h3 className="catalog-path-text">Главная </h3>
+                </NavLink>
+
+                <NavLink className="nav-link-catalog" onClick={() => {
+                    localStorage.setItem("subPath", '')
+                    window.location.reload()
+                }} to="/Catalog">
+                    <h3 className="catalog-path-text">{path}</h3>
+                </NavLink>
+                
                 <h3 className="catalog-path-text-help">{path2}</h3>
+
+                
             </div>
             
 
@@ -112,12 +136,12 @@ const Catalog = () => {
                 <h3 className="sort-catalog-text">Сортировать по:</h3>
                     <div className="filter-price">
                         <p>Цена, б.р</p>
-                        <input type="range" ></input>
+                        <input type="range" />
                     </div>
                     
                     <div className="size-div-catalog">
                         <button onClick={size === 'none' ? () => setSize('block') : () => setSize('none')} className="size-button-catalog">
-                            <label>Размер</label>
+                            <label className="size-catalog-filter-btn">Размер</label>
                             <img style={size === 'block' ? {rotate: '180deg'} : {rotate: '0deg'}} src={arrow} alt=""></img>
                         </button>
                         <div style={{display: size}}>
@@ -134,7 +158,7 @@ const Catalog = () => {
                         <button
                         onClick={color === 'none' ? () => setColor('flex') : () => setColor('none')}
                         className="colors-button-catalog">
-                            <label>Цвета</label>
+                            <label className="colors-catalog-btn-filter">Цвета</label>
                             <img style={color === 'flex' ? {rotate: "180deg"} : {rotate: "0deg"}} src={arrow} alt="no img" />
                         </button>
                         <div style={{display: color}} className="color-handler-catalog">

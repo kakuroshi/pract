@@ -47,7 +47,7 @@ const Faq = () => {
 
 
     return (
-        <div className="faq">
+        <section className="faq">
             <div className="header-faq">
                 <h1 className="faq-header-text">Часто задаваемые вопросы</h1>
                 <h1 className="faq-header-faq-text">FAQ</h1>
@@ -70,7 +70,7 @@ const Faq = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

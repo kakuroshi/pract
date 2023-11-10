@@ -1,3 +1,7 @@
+.catalog-welcome-nav-link{
+    text-decoration: none;
+}
+
 .catalog-welcome{
     display: flex;
     align-items: center;

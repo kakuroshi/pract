@@ -12,6 +12,12 @@ const Favorites = () => {
     let favorites = JSON.parse(localStorage.getItem("like"))
     // console.log(favorites);
 
+    function getEmpty() {
+        if (favorites.length === 0) {
+            return (<h1 className="empty-favorite">В избранном пусто</h1>)
+        }
+    }
+
     return (
         <main className="favorites-main">
             <Header users={users} />
@@ -42,6 +48,10 @@ const Favorites = () => {
                     </div>
 
                     <div className="right-favorite">
+
+                        {
+                            getEmpty()
+                        }
                         {favorites.map( el => (
                             <CardProduct class="favourite-product" classImg="img-favorite" name={el.name} newPrice={el.newPrice} oldPrice={el.oldPrice} rating={el.rating} img={el.img} id={el.id} />
                         ))}

@@ -2,7 +2,7 @@ import "../Style/Css/WelcomeToJoin.css"
 
 const WelcomeToJoin = () => {
     return (
-        <div className="welcome-to-join">
+        <section className="welcome-to-join">
             <form className="form-join">
                 <div className="text-join-div">
                     <p className="join-text">Приглашаем  к сотрудничеству производителей и поставщиков одежды, обуви и аксессуаров</p>
@@ -15,7 +15,7 @@ const WelcomeToJoin = () => {
                 
                 <div className="check-join">
                     <input className="checkbox-join" type="checkbox" />
-                    <p className="check-text">Даю согласие на обработку персональных данных</p>
+                    <label className="check-text">Даю согласие на обработку персональных данных</label>
                 </div>
 
                 <button className="send-form">
@@ -34,7 +34,7 @@ const WelcomeToJoin = () => {
             </svg>
 
             <div className="semicircle-join"></div>
-        </div>
+        </section>
     )
 }
 

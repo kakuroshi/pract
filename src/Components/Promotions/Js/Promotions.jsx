@@ -43,7 +43,7 @@ const Promotions = () => {
     ]
 
     return (
-        <div className="promotions-div">
+        <section className="promotions-div">
             <h1 className="promotions-head-text">Успей купить!</h1>
             <h1 className="promotions-head-help">Акции</h1>
 
@@ -61,7 +61,7 @@ const Promotions = () => {
                     <path d="M66.3536 24.3536C66.5488 24.1583 66.5488 23.8417 66.3536 23.6464L63.1716 20.4645C62.9763 20.2692 62.6597 20.2692 62.4645 20.4645C62.2692 20.6597 62.2692 20.9763 62.4645 21.1716L65.2929 24L62.4645 26.8284C62.2692 27.0237 62.2692 27.3403 62.4645 27.5355C62.6597 27.7308 62.9763 27.7308 63.1716 27.5355L66.3536 24.3536ZM20 24.5H66V23.5H20V24.5Z" fill="#514A7E"/>
                 </svg>
             </button> */}
-        </div>
+        </section>
     )
 }
 

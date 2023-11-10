@@ -67,7 +67,7 @@ const Cooperation = () => {
     ))
 
     return (
-        <div className="cooperation">
+        <section className="cooperation">
             <h1 className="cooperation-header-text">Сотрудничество с нами</h1>
             <p className="cooperation-head-text-p">Наша компания постоянно растёт и расширяет рынок, поэтому мы заинтересованы в новых партнёрах и рассматриваем новые проекты, которые могут быть привлекательны и интересны с коммерческой точки зрения. </p>
 
@@ -80,7 +80,7 @@ const Cooperation = () => {
             <div className="adventages-div">
                 {adventagesRender}
             </div>
-        </div>
+        </section>
     )
 }
 

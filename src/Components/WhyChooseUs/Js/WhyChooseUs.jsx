@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
     }
 
     return (
-        <div className="why-choose-div">
+        <section className="why-choose-div">
             <div className="semicircle-why-choose"></div>
 
             <h1 className="why-choose-head-text">Почему выбирают нас?</h1>
@@ -157,7 +157,7 @@ const WhyChooseUs = () => {
                     </svg>
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 

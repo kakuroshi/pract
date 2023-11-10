@@ -115,3 +115,8 @@ button{
     margin-top: 2vh;
     display: none;
 }
+
+.nav-link-more-filters-header{
+    text-decoration: none;
+    color: rgba(255, 253, 245, 1);
+}

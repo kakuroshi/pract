@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 const CatalogButton = () => {
     return (
-        <NavLink to="/Catalog">
+        <NavLink className="catalog-welcome-nav-link" to="/Catalog">
             <div className="catalog-welcome">
                 <button className="catalog-button-welcome">
                     <p className="catalog-button-p">Каталог</p>

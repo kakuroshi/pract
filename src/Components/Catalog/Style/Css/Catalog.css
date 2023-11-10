@@ -31,6 +31,7 @@
 .catalog-path-text-help{
     margin-left: 5px;
     color: rgba(81, 74, 126, 1);
+    font-weight: 100;
 }
 
 .size-button-catalog, .colors-button-catalog{
@@ -184,4 +185,16 @@ input[type="range"]::-webkit-slider-thumb {
 .color-handler-catalog {
     display: flex;
     flex-wrap: wrap
+}
+
+.size-catalog-filter-btn, .colors-catalog-btn-filter{
+    font-size: 1.2em;
+}
+
+.catalog-path-text{
+    font-weight: 100;
+}
+
+.nav-link-catalog{
+    text-decoration: none;
 }

@@ -2,6 +2,7 @@ import Arrow from "../Style/Images/arrow.svg"
 import Star from "../Style/Images/star.svg"
 import Heart from "../Style/Images/clarity_heart-line.svg"
 import Cart from "../Style/Images/clarity_shopping-bag-line.svg"
+import "../Style/Css/CardProduct.css"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
@@ -16,10 +17,10 @@ const CardProduct = (el) => {
         console.log(cartItems);
         let cart;
 
-        for(let i = 0; i < cartItems.length; i++) {
-            if(cartItems[i].id === el.id) {
+        for (let i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].id === el.id) {
                 cartItems[i].count += 1
-                flag = true 
+                flag = true
                 break;
             }
         }
@@ -78,19 +79,19 @@ const CardProduct = (el) => {
             setLike(null)
 
             lsMas = JSON.parse(localStorage.getItem("like"))
-            
+
             for (let i = 0; i < lsMas.length; i++) {
                 if (el.id === lsMas[i].id) {
                     lsMas.splice(i, 1)
                     localStorage.setItem("like", JSON.stringify(lsMas))
                 }
             }
-        }  
+        }
         localStorage.setItem("like", JSON.stringify(lsMas))
     }
 
     function getStyle() {
-        
+
         if (localStorage.getItem("like") !== null) {
             lsMas = JSON.parse(localStorage.getItem("like"))
 
@@ -104,7 +105,10 @@ const CardProduct = (el) => {
     }
 
     function getMore() {
+        localStorage.setItem("windowLoc", window.location.href)
         localStorage.setItem("card", JSON.stringify(el))
+
+
     }
 
     return (
@@ -121,10 +125,10 @@ const CardProduct = (el) => {
                     <div className="main-buttns-product">
                         <button
                             onClick={likeProduct}
-                            
-                            style={like === null ? {backgroundColor: getStyle()} : {backgroundColor: getStyle()}}
 
-                                className="like-button-product">
+                            style={like === null ? { backgroundColor: getStyle() } : { backgroundColor: getStyle() }}
+
+                            className="like-button-product">
                             <img src={Heart} alt="no img" />
                         </button>
                         <button onClick={getCart} className="cart-button-product">
@@ -134,7 +138,7 @@ const CardProduct = (el) => {
                 </div>
 
                 <div className="product-footer">
-                    <NavLink to="/ProductPage">
+                    <NavLink className="card-nav-link" to="/ProductPage">
                         <button onClick={getMore} className="more-about-product">
                             <p className="more-product-text">Подробнее</p>
                             <img className="arrow-promotions" src={Arrow} alt="" />

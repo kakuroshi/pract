@@ -37,7 +37,7 @@ const Feedback = (props) => {
     }
 
     return (
-        <div className="feedback">
+        <section className="feedback">
             <h1 className="feedback-head-text">{props.head}</h1>
 
             <div className="feedback-div">
@@ -70,7 +70,7 @@ const Feedback = (props) => {
             </div>
 
             <button onClick={addFeedback} className="feedback-add-button"><p className="text-button-feedback">Добавить отзыв</p></button>
-        </div>
+        </section>
     )
 }
 

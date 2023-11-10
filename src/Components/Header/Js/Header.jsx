@@ -27,39 +27,39 @@ const Header = (props) => {
     const filterBtns = [
         {
             id: 0,
-            text: "Женщинам "         
+            text: "Женщинам "
         },
         {
             id: 1,
-            text: "Мужчинам"         
+            text: "Мужчинам"
         },
         {
             id: 2,
-            text: "Детям"         
+            text: "Детям"
         },
         {
             id: 3,
-            text: "Обувь"         
+            text: "Обувь"
         },
         {
             id: 4,
-            text: "Игрушки"         
+            text: "Игрушки"
         },
         {
             id: 5,
-            text: "Аксессуары"         
+            text: "Аксессуары"
         },
         {
             id: 6,
-            text: "Большие размеры"         
+            text: "Большие размеры"
         },
         {
             id: 7,
-            text: "Дополнительно"         
+            text: "Дополнительно"
         },
         {
             id: 8,
-            text: "Акции"         
+            text: "Акции"
         },
     ]
 
@@ -111,22 +111,18 @@ const Header = (props) => {
     ]
 
     const [moreFilters, setFilter] = useState(defaultFilters)
-
     const [activeFilter, setActive] = useState(null)
-
     const [getModal, setModal] = useState(null)
-
     const [showFilter, setFilters] = useState(null)
-
     const [openEnterModal, setEnterModal] = useState(null)
 
     return (
         <header className="header-div">
-            <button onClick={showFilter === null ? () => {setFilters(1)} : () => {setFilters(null)}} className="menu-button-header">
+            <button onClick={showFilter === null ? () => { setFilters(1) } : () => { setFilters(null) }} className="menu-button-header">
                 <img src={MenuIco} alt="Menu button" />
             </button>
 
-            <div style={showFilter !== null ? {display: "block"} : {display: "none"}
+            <div style={showFilter !== null ? { display: "block" } : { display: "none" }
             } className="filter-header">
                 <img className="logo-filter" src={logo} alt="" />
                 <div className="text-filters-divs">
@@ -136,10 +132,11 @@ const Header = (props) => {
                                 <p key={el.id} onClick={
                                     () => {
                                         setActive(el.id)
+                                        localStorage.setItem('path', `/ ${el.text}`)
                                         if (el.id === 0) {
                                             setFilter(defaultFilters)
                                         }
-                                        
+
                                         if (el.id === 1) {
                                             setFilter(
                                                 [
@@ -185,16 +182,28 @@ const Header = (props) => {
                                             setFilter(defaultFilters)
                                         }
                                     }
-                                
-                                } style={activeFilter === el.id ? {fontSize: '1.5em'} : {fontSize: '1em'}} className="filter-text">{el.text}</p>
+
+                                } style={activeFilter === el.id ? { fontSize: '1.5em' } : { fontSize: '1em' }} className="filter-text">{el.text}</p>
                             ))
                         }
                     </div>
 
-                    <div style={activeFilter === null ? {display: "none"} : {display: "block"}} className="right-text-filters">
+                    <div
+                        style={activeFilter === null ? { display: "none" } : { display: "block" }} className="right-text-filters">
                         {moreFilters.map(el => (
-                            <p className="more-filter-text">{el.text}</p>
+                            <NavLink className="nav-link-more-filters-header" to='/Catalog'>
+                                <p
+                                    onClick={() => {
+                                        localStorage.setItem("subPath", `/ ${el.text}`)
+                                        if (window.location.href === "http://localhost:3000/Catalog") {
+                                            window.location.reload()
+                                        }
+
+                                    }}
+                                    className="more-filter-text">{el.text}</p>
+                            </NavLink>
                         ))}
+
                     </div>
                 </div>
 
@@ -202,7 +211,7 @@ const Header = (props) => {
 
             <div className="search-div-header">
                 <button className="search-button-header">
-                <img src={SearchIco} alt="" />
+                    <img src={SearchIco} alt="" />
                 </button>
 
                 <input type="text" placeholder="Поиск" className="input-search-header" />
@@ -210,8 +219,8 @@ const Header = (props) => {
 
             <div className="header-buttons">
                 <button onClick={
-                    getModal === null ? () => {setModal(1)} : () => {setModal(null)} 
-                    } className="profile-button-header">
+                    getModal === null ? () => { setModal(1) } : () => { setModal(null) }
+                } className="profile-button-header">
                     <img src={ProfileIco} alt="" />
                 </button>
                 <NavLink to="/Favorites">
@@ -219,7 +228,7 @@ const Header = (props) => {
                         <img src={LikeIco} alt="" />
                     </button>
                 </NavLink>
-                    
+
                 <NavLink to="/Cart">
                     <button className="cart-button-header">
                         <img src={CartIco} alt="" />
@@ -227,15 +236,15 @@ const Header = (props) => {
                 </NavLink>
             </div>
 
-            <div style={getModal !== null ? {display: "flex"} : {display: "none"}} className="profile-modal">
+            <div style={getModal !== null ? { display: "flex" } : { display: "none" }} className="profile-modal">
                 <div className="profile-modal-img">
                     <img className="user-image-profile-modal" src={profileImgUser} alt="no img" />
-                    <p style={nickname !== "" ? {display: "block"} : {display: "none"}} className="name-user-auth">{nickname}</p>
+                    <p style={nickname !== "" ? { display: "block" } : { display: "none" }} className="name-user-auth">{nickname}</p>
                 </div>
 
                 <button onClick={
-                    openEnterModal === null ? () => {setEnterModal(1)} : () => {setEnterModal(null)}
-                } style={user !== null ? {display: "none"} : {display: "block"}} className="enter-btn-modal">
+                    openEnterModal === null ? () => { setEnterModal(1) } : () => { setEnterModal(null) }
+                } style={user !== null ? { display: "none" } : { display: "block" }} className="enter-btn-modal">
                     Войти
                 </button>
 
@@ -254,26 +263,26 @@ const Header = (props) => {
                         Избранное
                     </button>
                 </NavLink>
-                
+
 
                 <button className="view-modal">
                     <img src={view} alt="" />
                     Просмотренные
                 </button>
 
-                <img style={user !== null ? {display: "block"} : {display: "none"}} className="hr-modal" src={hr} alt="" />
+                <img style={user !== null ? { display: "block" } : { display: "none" }} className="hr-modal" src={hr} alt="" />
 
-                <button onClick={ () => {
+                <button onClick={() => {
                     localStorage.removeItem('auth')
                     window.location.reload()
-                }   
-                } style={user !== null ? {display: "block"} : {display: "none"}} className="exit-account">
+                }
+                } style={user !== null ? { display: "block" } : { display: "none" }} className="exit-account">
                     <img src={exit} alt="" />
                     Выйти
                 </button>
             </div>
 
-            <EnterModal setEnterModal={setEnterModal} openEnterModal={openEnterModal} users={props.users}/>
+            <EnterModal setEnterModal={setEnterModal} openEnterModal={openEnterModal} users={props.users} />
         </header>
     )
 }
