@@ -20,7 +20,7 @@ const Feedback = (props) => {
             name: "Анастасия Чаро",
             message: "Заказываю постоянно одежду в этом магазине! Хорошие цены, хорошее качество! Приятные менеджеры! Все быстро, доступно, удобно! Спасибо.",
             rating: 5,
-            date: "вчира"
+            date: "22.02.2021"
         }
     ])
 
@@ -55,7 +55,7 @@ const Feedback = (props) => {
                                 </div>
 
                                 <p className="feedback-user-text">{el.message} </p>
-                                <div className="fee dback-user-footer">
+                                <div className="feedback-user-footer">
                                     <p className="user-feedback-name">{el.name}</p>
                                     <p className="date-feedback">{el.date} </p>
                                 </div>
